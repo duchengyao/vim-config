@@ -31,11 +31,11 @@ Plugin 'klen/rope-vim'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 ""code folding
-Plugin 'tmhedberg/SimpylFold'
+"Plugin 'tmhedberg/SimpylFold'
 
 "Colors!!!
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jnurmine/Zenburn'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'jnurmine/Zenburn'
 
 call vundle#end()
 
@@ -50,7 +50,15 @@ let mapleader=" "
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "
 call togglebg#map("<F5>")
-"colorscheme zenburn
+
+"if has('gui_running')
+"  set background=light
+"  set italic=off
+"  colorscheme solarized
+"else
+"  colorscheme Zenburn
+"endif
+
 "set guifont=Monaco:h14
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -116,9 +124,9 @@ set backspace=indent,eol,start
 
 
 "Folding based on indentation:
-autocmd FileType python set foldmethod=indent
+"autocmd FileType python set foldmethod=indent
 "use space to open folds
-nnoremap <space> za 
+"nnoremap <space> za 
 "----------Stop python PEP 8 stuff--------------
 
 "js stuff"
