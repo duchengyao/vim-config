@@ -49,7 +49,16 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let mapleader=" "
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "
+
 "call togglebg#map("<F5>")
+
+
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
 
 "if has('gui_running')
 "  set background=light
@@ -58,6 +67,7 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "else
 "  colorscheme Zenburn
 "endif
+"colorscheme solarized
 
 "set guifont=Monaco:h14
 
