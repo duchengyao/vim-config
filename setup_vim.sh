@@ -8,6 +8,8 @@ vim +PluginInstall +qall
 
 sudo apt-get -y install build-essential cmake
 sudo apt-get -y install python-dev python3-dev
+sudo apt-get -y install python-markdown python-pygments
+
 
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
